@@ -1,0 +1,224 @@
+/* ================= GLOBAL RESET & BASE STYLES ================= */
+/* Removes default browser spacing and sets global font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* Base body colors */
+body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ================= HERO SECTION ================= */
+/* Full viewport hero with animated gradient background */
+.hero {
+  min-height: 100vh;
+
+  /* Main animated background gradient */
+  background: linear-gradient(
+    120deg,
+    #020617,
+    #0f172a,
+    #1e293b,
+    #0b3c5d,
+    #020617
+  );
+
+  /* Makes gradient movement visible */
+  background-size: 400% 400%;
+
+  /* Slow, smooth background animation */
+  animation: gradientFlow 20s ease infinite;
+
+  /* Centering content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Background gradient animation */
+@keyframes gradientFlow {
+  0%   { background-position: 0% 50%; }
+  25%  { background-position: 50% 100%; }
+  50%  { background-position: 100% 50%; }
+  75%  { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hero main heading */
+.hero-title {
+  font-size: 4.6rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+
+  /* Gradient text effect */
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #a78bfa,
+    #34d399
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hero tagline text */
+/* Hero tagline text with gradient (matching header, smooth) */
+.hero-tagline {
+  margin-top: 18px;
+  font-size: 1.4rem;          /* slightly bigger for emphasis */
+  font-weight: 600;           /* semi-bold */
+  letter-spacing: 0.5px;
+
+  /* Gradient text similar to hero title */
+  background: linear-gradient(
+    90deg,
+    #a78bfa,
+    #38bdf8,
+    #34d399
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Optional subtle animation for smooth look */
+  background-size: 200% 200%;
+  animation: textGradientFlow 6s ease-in-out infinite alternate;
+}
+
+/* Smooth subtle gradient animation for tagline */
+@keyframes textGradientFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+/* ================= WHY CHOOSE US SECTION ================= */
+/* Light, smooth background to separate from hero */
+.why-choose-us {
+  padding: 100px 10%;
+  text-align: center;
+
+  /* Soft modern gradient (not plain white) */
+  background: linear-gradient(
+    180deg,
+    #eef2ff,
+    #f8fafc,
+    #ecfeff
+  );
+}
+
+/* Section heading */
+.why-choose-us h2 {
+  font-size: 2.6rem;
+  margin-bottom: 55px;
+  color: #1e3a8a;
+}
+
+/* Cards layout */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Individual feature card */
+.card {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f1f5f9
+  );
+  padding: 42px;
+  width: 260px;
+  border-radius: 18px;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+
+  /* Soft shadow for depth */
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+
+  /* Hover animation */
+  transition: transform 0.3s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* ================= CALL TO ACTION SECTION ================= */
+.cta {
+  padding: 80px 10%;
+  background: linear-gradient(120deg, #020617, #1e293b);
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.3rem;
+  margin-bottom: 14px;
+}
+
+.cta p {
+  color: #c7d2fe;
+  margin-bottom: 32px;
+}
+
+/* CTA button */
+.cta button {
+  padding: 14px 40px;
+  border-radius: 30px;
+  border: none;
+
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, #22d3ee, #6366f1);
+  color: white;
+
+  transition: transform 0.2s ease;
+}
+
+/* Button hover */
+.cta button:hover {
+  transform: scale(1.05);
+}
+
+/* ================= NAVIGATION SECTION ================= */
+.navigation {
+  background: #ffffff;
+  padding: 22px;
+
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.06);
+}
+
+/* Navigation links */
+.navigation a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+/* ================= FOOTER SECTION ================= */
+.footer {
+  padding: 60px 10%;
+  background: #020617;
+  color: #c7d2fe;
+  text-align: center;
+}
+
+.footer h3 {
+  margin-bottom: 15px;
+  color: #a5b4fc;
+}
