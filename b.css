@@ -1,0 +1,178 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(
+    120deg,
+    #020617,
+    #0f172a,
+    #1e293b,
+    #0b3c5d,
+    #020617
+  );
+  background-size: 400% 400%;
+  animation: gradientFlow 20s ease infinite;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-title {
+  font-size: 4.6rem;
+  font-weight: 800;
+  background: linear-gradient(90deg,#38bdf8,#a78bfa,#34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-tagline {
+  margin-top: 18px;
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  background: linear-gradient(90deg,#a78bfa,#38bdf8,#34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= WHY CHOOSE US ================= */
+.why-choose-us {
+  padding: 100px 10%;
+  text-align: center;
+  background: linear-gradient(180deg,#eef2ff,#f8fafc,#ecfeff);
+}
+
+.why-choose-us h2 {
+  font-size: 2.6rem;
+  margin-bottom: 55px;
+  color: #1e3a8a;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: linear-gradient(135deg,#ffffff,#f1f5f9);
+  padding: 42px;
+  width: 260px;
+  border-radius: 18px;
+  font-weight: 600;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+
+/* ================= GALLERY SECTION ================= */
+.gallery-section {
+  background: #f8fbff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.5s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-item.active img {
+  transform: scale(1.12) rotate(1.5deg);
+}
+
+
+
+/* ================= CTA ================= */
+.cta {
+  padding: 80px 10%;
+  background: linear-gradient(120deg,#020617,#1e293b);
+  color: white;
+  text-align: center;
+}
+
+.cta button {
+  padding: 14px 40px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(90deg,#22d3ee,#6366f1);
+  color: white;
+  cursor: pointer;
+}
+
+/* ================= NAVIGATION ================= */
+.navigation {
+  background: #ffffff;
+  padding: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  padding: 60px 10%;
+  background: #020617;
+  color: #c7d2fe;
+  text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:768px){
+  .hero-title { font-size:2.6rem; }
+  .hero-tagline { font-size:1.1rem; }
+}
